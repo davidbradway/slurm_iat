@@ -13,5 +13,4 @@
 
 cd /getlab/dpb6/repos/slurmtest
 
-matlab -nojvm -nodisplay -r "a=${SLURM_ARRAY_TASK_ID};myScript,save('output_${SLURM_ARRAY_TASK_ID}.mat','b');"
-
+matlab -nojvm -nodisplay -r "a=${SLURM_ARRAY_TASK_ID};myScript,save('output/file_${SLURM_ARRAY_TASK_ID}.mat','b');"
