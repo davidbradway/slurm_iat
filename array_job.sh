@@ -13,4 +13,4 @@
 
 #cd /getlab/NETID/test
 
-matlab -nojvm -nodisplay -r "a=${SLURM_ARRAY_TASK_ID};myScript,save('output/file_${SLURM_ARRAY_TASK_ID}.mat','b');"
+matlab -nojvm -nodisplay -r "a=${SLURM_ARRAY_TASK_ID};myFeatureBasedAlignment,save('output/file_${SLURM_ARRAY_TASK_ID}.mat','b');"
