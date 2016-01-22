@@ -3,7 +3,7 @@ N=a;
 
 cd('iatool'); iat_setup;
 
-cd('../IMAGES'); file = dir('*.jpg');
+cd('../IMAGES'); file = dir('*.JPG');
 
 clc; close all;
 
