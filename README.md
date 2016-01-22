@@ -1,4 +1,4 @@
-# slurm_array
+# SLURM array job for Image Alignment Toolbox
 
 ## Get the code:
 
@@ -15,6 +15,6 @@
 ## Parallel processing using a SLURM script on a computer cluster:
 
 If you are feeling lucky, set up a SLURM array job:
-  1. In `launch.sh` set the array to be 1-N where N is the number of images.
-  2. Set the appropriate SLURM parameters in `array_job.sh`
-  3. Launch it on the cluster to warp all the frames to the first one.
+1. In `launch.sh` set the array to be 1-N where N is the number of images.
+2. Set the appropriate SLURM parameters in `array_job.sh`
+3. Launch it on the cluster to warp all the frames to the first one.
