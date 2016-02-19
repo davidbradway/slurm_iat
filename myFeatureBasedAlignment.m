@@ -28,8 +28,10 @@ end
 [d2, l2]=iat_surf(template);
 
 % Match keypoints
+disp('Match keypoints')
 %[map, matches, imgInd, tmpInd]=iat_match_features(d1,d2,.7);
 [map, matches, imgInd, tmpInd]=iat_match_features_mex(d1,d2,.7);
+disp('Finish Match keypoints')
 
 ptsA=l1(imgInd,1:2); ptsB=l2(tmpInd,1:2);
 
@@ -48,9 +50,11 @@ if(ifplot)
 end
 
 % Compute the warped image and visualize the error
+disp('Warp image')
 [wimage, support] = iat_inverse_warping(imageN, ransacWarp, transform, 1:size(template,2),1:size(template,1));
 
-save(['../output/' file(N).name '.mat'],'wimage');
+disp('Write JPG')
+imwrite(uint8(wimage),['../output/' file(N).name])
 
 if(ifplot)
     %plot the warped image
@@ -61,3 +65,6 @@ if(ifplot)
     figure; imshow(grayerror); title('Error of RANSAC feature-based alignment ', 'Fontsize', 14);
 end
 
+cd ..
+
+%%
