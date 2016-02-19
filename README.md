@@ -8,7 +8,7 @@
 ## Run a single alignment:
 
 1. Put the JPGs into `./IMAGES/`
-2. Try running `myFeatureBasedAlignment.m` in MATLAB with `a=2;` and `ifplot=1;
+2. Try running `myFeatureBasedAlignment.m` in MATLAB with `a=2;` and `ifplot=1;`
 3. The `./output` folder should contain a JPG of your rotated image.
 
 ## Parallel processing using a SLURM script on a computer cluster:
